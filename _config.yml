@@ -63,18 +63,14 @@ author:
   bio    : "A Computer Science graduate with over 3 years of freelance experience in web and app development, machine
 learning, and a strong foundation in data handling, databases, and programming."
   links:
-  
-    - label: "Clemson,SC"
-      icon: "fa-solid fa-location-pin" 
-      url:
-    - label: "ayeshajabbar36@gmail.com"
+    - label: "Email"
       icon: "fa-solid fa-envelope"
-      url:
+      url:  "ayeshajabbar36@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://ayesha159-ui.github.io/"
     - label: "Linkedin"
-      icon: "fa-solid fa-linkedin"
+      icon: "fa fa-linkedin-square"
       url: "https://linkedin.com/in/fnu-ayesha"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -86,7 +82,7 @@ footer:
       icon: "fas fa-fw fa-link"
       url: "https://ayesha159-ui.github.io/"
     - label: "Linkedin"
-      icon: "fa fa-linkedin"
+      icon: "fa fa-linkedin-square"
       url:  "https://linkedin.com/in/fnu-ayesha"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
