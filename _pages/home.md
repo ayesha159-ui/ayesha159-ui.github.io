@@ -1,8 +1,8 @@
-
 ---
 permalink: /home/
 title: "Home"
 ---
+
 I fell in love with programming and software development, and I’ve been on a continuous journey to build, learn, and grow as an engineer.
 
 I am fluent in languages like Python and JavaScript, with experience in frameworks such as React, Node.js, and Express.
