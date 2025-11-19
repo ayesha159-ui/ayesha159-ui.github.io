@@ -24,6 +24,7 @@ github_username: username
 minimal_mistakes_skin: dark
 search: true
 
+
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
@@ -63,14 +64,17 @@ author:
   bio    : "A Computer Science graduate with over 3 years of freelance experience in web and app development, machine
 learning, and a strong foundation in data handling, databases, and programming."
   links:
-    - label: "Email"
+    - label: "Clemson,SC"
+      icon: "fa fa-map-marker"
+      url: "https://"
+    - label: "ayeshajabbar36@gmail.com"
       icon: "fa-solid fa-envelope"
-      url:  "ayeshajabbar36@gmail.com"
+      url:  "https://"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://ayesha159-ui.github.io/"
     - label: "Linkedin"
-      icon: "fa fa-linkedin-square"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/fnu-ayesha"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -82,7 +86,7 @@ footer:
       icon: "fas fa-fw fa-link"
       url: "https://ayesha159-ui.github.io/"
     - label: "Linkedin"
-      icon: "fa fa-linkedin-square"
+      icon: "fab fa-fw fa-linkedin"
       url:  "https://linkedin.com/in/fnu-ayesha"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
