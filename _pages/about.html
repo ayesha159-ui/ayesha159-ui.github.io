@@ -6,344 +6,188 @@ title: "About"
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About – Your Name</title>
+  <title>About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  integrity="sha512-SVLKFHkq3FdC1vkpawuO/7dBDEuDfSU/EYEYVplpXCMVvjJAnCmvYzu3/n6PvJEa3TBUnIFVQGryxkS7jHkKtA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  />
   <style>
-    :root {
-      --bg: #020617;
-      --bg-card: #020617;
-      --border: #1f2937;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.1);
-      --chip-bg: #0b1120;
-    }
 
-    * {
-      box-sizing: border-box;
-    }
+/* ==== Skill Section Styles ==== */
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #020617 0, #000 55%);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 24px;
-    }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #050013;                 /* dark space-like bg */
+  color: #ffffff;
+}
 
-    .shell {
-      width: 100%;
-      max-width: 900px;
-    }
+/* wrapper for the whole section */
+.skill-section {
+  padding: 4rem 1.5rem 5rem;
+  text-align: center;
+}
 
-    .card {
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: linear-gradient(145deg, #020617 0%, #020617 45%, #030712 100%);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-      padding: 24px 24px 28px;
-    }
+/* main title */
+.skill-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
 
-    @media (min-width: 768px) {
-      .card {
-        padding: 32px 32px 36px;
-      }
-    }
+.skill-section h2 span {
+  color: #c084fc;                      /* purple highlight */
+}
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
+/* sub-category titles */
+.skill-group-title {
+  font-size: 1.5rem;
+  margin: 2rem 0 1.5rem;
+}
 
-    .logo {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--accent);
-      background: radial-gradient(circle at 20% 0, #1e293b 0, #020617 55%);
-    }
+/* grid of cards */
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
 
-    header nav {
-      display: flex;
-      gap: 12px;
-      font-size: 14px;
-    }
+/* individual card */
+.skill-card {
+  width: 180px;
+  height: 120px;
+  border-radius: 14px;
+  border: 2px solid rgba(192, 132, 252, 0.8);  /* purple border */
+  background: radial-gradient(circle at top, #120024 0, #050013 55%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 18px rgba(192, 132, 252, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
 
-    header nav a {
-      text-decoration: none;
-      color: var(--text-muted);
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-    }
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(192, 132, 252, 0.6);
+  border-color: #e879f9;
+}
 
-    header nav a.active {
-      border-color: var(--border);
-      background: rgba(15, 23, 42, 0.8);
-      color: var(--text-main);
-    }
+/* big “icon” text inside card */
+.skill-icon {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
 
-    header nav a:hover {
-      color: var(--text-main);
-    }
+/* for smaller text like php, react, etc. */
+.skill-icon.small-text {
+  font-size: 2.2rem;
+  font-style: italic;
+}
 
-    main {
-      display: grid;
-      gap: 24px;
-    }
+/* optional label under card (if you want) */
+.skill-label {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
 
-    @media (min-width: 850px) {
-      main {
-        grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
-        gap: 32px;
-        align-items: flex-start;
-      }
-    }
+/* mobile tweak */
+@media (max-width: 600px) {
+  .skill-card {
+    width: 150px;
+    height: 100px;
+  }
+}
 
-    .title-block h1 {
-      margin: 0 0 4px;
-      font-size: 32px;
-      letter-spacing: -0.03em;
-    }
-
-    .title-block .subtitle {
-      margin: 0 0 14px;
-      font-size: 15px;
-      color: var(--text-muted);
-    }
-
-    .title-block .summary {
-      margin: 0 0 18px;
-      line-height: 1.6;
-      font-size: 15px;
-      color: var(--text-main);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .pill {
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      padding: 6px 10px;
-      font-size: 12px;
-      color: var(--text-muted);
-      background: rgba(15, 23, 42, 0.7);
-    }
-
-    .links-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .link-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 13px;
-      text-decoration: none;
-      color: var(--text-main);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .link-btn span.icon {
-      font-size: 14px;
-    }
-
-    .link-btn.primary {
-      border-color: var(--accent);
-      background: var(--accent-soft);
-      color: var(--accent);
-    }
-
-    .section-title {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    .stack-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .chip {
-      border-radius: 999px;
-      background: var(--chip-bg);
-      border: 1px solid var(--border);
-      padding: 6px 10px;
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .side-card {
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.7);
-      padding: 14px 14px 16px;
-      font-size: 13px;
-    }
-
-    .side-card + .side-card {
-      margin-top: 10px;
-    }
-
-    .side-heading {
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .side-meta {
-      color: var(--text-muted);
-      font-size: 12px;
-      margin-bottom: 6px;
-    }
-
-    .side-list {
-      padding-left: 18px;
-      margin: 0;
-      color: var(--text-muted);
-    }
-
-    footer {
-      margin-top: 20px;
-      font-size: 11px;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    a {
-      color: var(--accent);
-    }
   </style>
 </head>
 <body>
-  <div class="shell">
-    <div class="card">
-      <header>
-        <div class="logo">A</div>
-        <nav>
-          <a href="/" >Home</a>
-          <a href="#" class="active">About</a>
-          <a href="#projects">Projects</a>
-        </nav>
-      </header>
+  <!-- Professional Skillset Section -->
+  <section class="about-section">
+  <div class="about-text">
+    <h2 class="about-title">Know Who <span>I’m</span></h2>
 
-      <main>
-        <!-- LEFT COLUMN -->
-        <section class="title-block">
-          <h1>Ayesha</h1>
-          <p class="subtitle">Frontend Developer · QA Engineer · Student</p>
-          <p class="summary">
-            I build clean, responsive web interfaces and break them on purpose to
-            make them reliable. Passionate about frontend development, testing,
-            and turning ideas into fast, usable products.
-          </p>
+    <p>
+      Hi Everyone, I am <a href="#">Ayesha</a> from
+      <a href="#">Clemson,SC, USA</a>.
+    </p>
+    <p>
+      I am a self-driven Software Engineer with a strong background in
+      programming, problem-solving, and building scalable applications.
+    </p>
+    <p>
+      I have completed several professional certifications, including the
+      9-Month Professional Diploma from the Information Technology Institute
+      (ITI), which provided intensive training in software engineering and
+      development best practices.
+    </p>
 
-          <div class="pill-row">
-            <span class="pill">Open to internships</span>
-            <span class="pill">Remote / Hybrid</span>
-            <span class="pill">Based in XYZ</span>
-          </div>
+    <p class="about-list-title">
+      Apart from software engineering, here are a few things I love to do!
+    </p>
 
-          <div class="links-row">
-            <a class="link-btn primary" href="/assets/data/AyeshaResume.pdf" target="_blank">
-              <span class="icon">📄</span>
-              <span>View Resume (PDF)</span>
-            </a>
-            <a class="link-btn" href="https://github.com/yourusername" target="_blank">
-              <span class="icon">💻</span>
-              <span>GitHub</span>
-            </a>
-            <a class="link-btn" href="https://www.linkedin.com/in/yourprofile" target="_blank">
-              <span class="icon">🔗</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+    <ul class="about-list">
+      <li>
+        <i class="fa-solid fa-hand-point-right"></i>
+        <span>Teaching and mentoring students in mathematics</span>
+      </li>
+      <li>
+        <i class="fa-solid fa-hand-point-right"></i>
+        <span>Exploring new advancements in technology</span>
+      </li>
+      <li>
+        <i class="fa-solid fa-hand-point-right"></i>
+        <span>Engaging in open-source projects</span>
+      </li>
+    </ul>
+  </div>
 
-          <div style="margin-top: 16px;">
-            <div class="section-title">Tech stack</div>
-            <div class="stack-chips">
-              <span class="chip">HTML / CSS / JS</span>
-              <span class="chip">React</span>
-              <span class="chip">Tailwind</span>
-              <span class="chip">Git & GitHub</span>
-              <span class="chip">Manual QA</span>
-              <span class="chip">REST APIs</span>
-            </div>
-          </div>
-        </section>
+  <div class="about-illustration">
+    <!-- Replace src with your own illustration path -->
+    <img src="assests/images/about-illustration.jpeg" alt="Developer at desk illustration" />
+  </div>
+</section>
 
-        <!-- RIGHT COLUMN -->
-        <section>
-          <div class="side-card">
-            <div class="side-heading">Current</div>
-            <div class="side-meta">Frontend & QA Intern · SPS</div>
-            <p class="side-text">
-              Working on web interfaces, fixing bugs, writing test cases, and
-              learning how production code is shipped in real teams.
-            </p>
-          </div>
+ <section class="skill-section">
+  <h2>Professional <span>Skillset</span></h2>
 
-          <div class="side-card">
-            <div class="side-heading">Experience Highlights</div>
-            <ul class="side-list">
-              <li>Built responsive landing pages and dashboards.</li>
-              <li>Tested features across multiple browsers & devices.</li>
-              <li>Collaborated using pull requests and code reviews.</li>
-            </ul>
-          </div>
-
-          <div class="side-card" id="projects">
-            <div class="side-heading">Selected Projects</div>
-            <ul class="side-list">
-              <li><strong>Portfolio Site</strong> – Personal site built with HTML, CSS, and GitHub Pages.</li>
-              <li><strong>Task Tracker</strong> – Simple web app for managing daily tasks.</li>
-              <li><strong>UI Testing Notes</strong> – Collection of test cases and bug reports.</li>
-            </ul>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <span>© <span id="year"></span> Your Name</span>
-        <span>Built with ❤ using HTML & CSS</span>
-      </footer>
+  <!-- Programming Languages -->
+  <h3 class="skill-group-title">Programming Languages</h3>
+  <div class="skill-grid">
+    <div class="skill-card">
+      <i class="fa-brands fa-python skill-icon"></i>
+    </div>
+    <div class="skill-card">
+      <i class="fa-brands fa-js skill-icon"></i>
+    </div>
+    <div class="skill-card">
+      <i class="fa-brands fa-java skill-icon"></i>
+    </div>
+    <div class="skill-card">
+      <i class="fa-brands fa-php skill-icon"></i>
     </div>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <!-- Frontend Development -->
+  <h3 class="skill-group-title">Frontend Development</h3>
+  <div class="skill-grid">
+    <div class="skill-card">
+      <i class="fa-brands fa-react skill-icon"></i>
+    </div>
+    <div class="skill-card">
+      <i class="fa-brands fa-html5 skill-icon"></i>
+    </div>
+    <div class="skill-card">
+      <i class="fa-brands fa-css3-alt skill-icon"></i>
+    </div>
+  </div>
+</section>
+
 </body>
+
 </html>
