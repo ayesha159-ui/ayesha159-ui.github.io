@@ -31,7 +31,9 @@ body {
   /* less vertical space */
   padding: 2.5rem 1.5rem 3rem;
 }
-
+.skill-section h2 span {
+  color: #8CD2D5;                   
+}
 /* smaller heading */
 .skill-section h2 {
   font-size: 2rem;          /* was bigger */
@@ -54,17 +56,33 @@ body {
   box-shadow: 0 0 14px rgba(140, 210, 213, 0.25);
 }
 
-/* icons inside cards */
-.skill-icon {
-  font-size: 2.2rem;
-}
-
 /* put ALL icons of each group in one line on desktop */
 .skill-grid {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: nowrap;       /* force one row */
+}
+/* Center icons perfectly in the cards */
+.skill-card {
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+  padding: 0;              /* make sure padding isn't pushing icons */
+}
+
+/* If you're using <img> for icons */
+.skill-card img {
+  display: block;
+  max-width: 60%;
+  max-height: 60%;
+  margin: 0;              /* no extra space */
+}
+
+/* If you're using Font Awesome or text icons */
+.skill-icon {
+  font-size: 2.4rem;
+  line-height: 1;
 }
 
 /* but allow wrapping on small screens so it doesn't overflow */
