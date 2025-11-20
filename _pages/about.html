@@ -26,84 +26,62 @@ body {
 }
 
 /* wrapper for the whole section */
+
 .skill-section {
-  padding: 4rem 1.5rem 5rem;
-  text-align: center;
+  /* less vertical space */
+  padding: 2.5rem 1.5rem 3rem;
 }
-    
 
-/* main title */
+/* smaller heading */
 .skill-section h2 {
-  font-size: 2.4rem;
-  margin-bottom: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;          /* was bigger */
+  margin-bottom: 0.8rem;
 }
 
-.skill-section h2 span {
-  color:#8CD2D5;                      /* purple highlight */
-}
-
-/* sub-category titles */
+/* sub-heading (Programming Languages / Frontend Dev) */
 .skill-group-title {
-  font-size: 1.5rem;
-  margin: 2rem 0 1.5rem;
+  font-size: 1.3rem;
+  margin: 1.4rem 0 1rem;
 }
 
-/* grid of cards */
+/* cards: smaller + border with Skillset color (#8CD2D5) */
+.skill-card {
+  width: 140px;
+  height: 90px;
+  border-radius: 12px;
+  border: 2px solid #8CD2D5;                  /* highlight color */
+  background: #050013;
+  box-shadow: 0 0 14px rgba(140, 210, 213, 0.25);
+}
+
+/* icons inside cards */
+.skill-icon {
+  font-size: 2.2rem;
+}
+
+/* put ALL icons of each group in one line on desktop */
 .skill-grid {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-wrap: nowrap;       /* force one row */
 }
 
-/* individual card */
-.skill-card {
-  width: 180px;
-  height: 120px;
-  border-radius: 14px;
-  border: 2px solid rgba(192, 132, 252, 0.8);  /* purple border */
-  background: radial-gradient(circle at top, #120024 0, #050013 55%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 18px rgba(192, 132, 252, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.skill-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(192, 132, 252, 0.6);
-  border-color: #8CD2D5;
-}
-
-/* big “icon” text inside card */
-  .skill-icon {
-  font-size: 2.8rem;
-  font-weight: 400;
-  line-height: 1;
-}
-
-
-/* for smaller text like php, react, etc. */
-.skill-icon.small-text {
-  font-size: 2.2rem;
-  font-style: italic;
-}
-
-/* optional label under card (if you want) */
-.skill-label {
-  margin-top: 0.4rem;
-  font-size: 0.9rem;
-  color: #8CD2D5;
-}
-
-/* mobile tweak */
-@media (max-width: 600px) {
-  .skill-card {
-    width: 150px;
-    height: 100px;
+/* but allow wrapping on small screens so it doesn't overflow */
+@media (max-width: 768px) {
+  .skill-grid {
+    flex-wrap: wrap;
   }
+
+  .skill-card {
+    width: 130px;
+    height: 85px;
+  }
+
+  .skill-section h2 {
+    font-size: 1.7rem;
+  }
+}
 }
 
   </style>
@@ -112,7 +90,6 @@ body {
   <section class="about-section">
   <div class="about-text">
     <h2 class="about-title">Know Who <span>I’m</span></h2>
-
     <p>
       Hi Everyone, I am <a href="#">Ayesha</a> from
       <a href="#">Clemson,SC, USA</a>.
