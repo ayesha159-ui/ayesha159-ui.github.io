@@ -27,9 +27,9 @@ body {
 /* ===== Projects Section ===== */
 
 .projects-section {
-  padding: 3.5rem 1.5rem 4rem;
-  max-width: 1150px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
 }
 
 .projects-header {
@@ -54,10 +54,10 @@ body {
 }
 
 /* Grid layout */
-.projects-grid {
+ .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 2rem;
 }
 
 /* Card styling */
@@ -68,6 +68,7 @@ body {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
   padding: 1rem 1.1rem 1.3rem;
   display: flex;
+  width: 100%;
   flex-direction: column;
   transition: transform 0.18s ease, box-shadow 0.18s ease,
     border-color 0.18s ease;
@@ -134,45 +135,14 @@ body {
 }
 
 /* Responsive tweaks */
-@media (max-width: 600px) {
-  .projects-header h2 {
-    font-size: 1.9rem;
-  }
-
-  .projects-section {
-    padding: 3rem 1rem 3.5rem;
-  }
-
-  /* Center the whole section and remove weird left space */
-.projects-section {
-  max-width: 1100px;    /* or whatever you like */
-  margin: 0 auto;       /* centers it */
-  padding: 3rem 1.5rem 4rem;
-}
-
-/* === 2 cards per row on desktop === */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));  /* 2 columns */
-  gap: 2rem 2rem;          /* row gap, column gap */
-}
-
-/* make cards fill their grid cell (no fixed width) */
-.project-card {
-  width: 100%;
-}
-
-/* === On small screens, go back to 1 per row === */
 @media (max-width: 800px) {
   .projects-grid {
-    grid-template-columns: 1fr;   /* single column on mobile */
+    grid-template-columns: 1fr;
   }
 
   .projects-section {
     padding: 2.5rem 1rem 3rem;
   }
-}
-
 }
 
   </style>
