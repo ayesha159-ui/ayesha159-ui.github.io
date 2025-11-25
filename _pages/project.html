@@ -11,8 +11,8 @@ title: Projects
   }
 
   .projects-section {
-    width: 800;
-    max-width: 1000;
+    width: 900px;
+    max-width: 1000px;
     margin: 0;
     padding: 0.5rem 1rem 2.5rem;
   }
@@ -38,12 +38,11 @@ title: Projects
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto, minmax(0, 1fr)); /* 2 cards per row */
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* 2 cards per row */
     gap: 1.5rem;
   }
 
   .project-card {
-    width:800;
     background: #141823;
     border-radius: 16px;
     border: 1px solid rgba(140, 210, 213, 0.4);
