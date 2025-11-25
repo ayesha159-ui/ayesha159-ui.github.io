@@ -1,253 +1,186 @@
 ---
+layout: default
+title: Projects
 permalink: /projects/
-title: "Projects"
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Projects</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+<style>
+  /* ===== Projects page custom styles ===== */
 
-  <style>
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #252a34;
-  color: #f9fafb;
-  padding-inline-end: 2px;
-}
-
-/* ===== Projects Section ===== */
-
-.projects-section {
-  max-width: 2500px;
-  margin: 0;
-  padding: 1.5rem 1.5rem 3rem;   /* smaller top padding */
-}
-.projects-header h2 {
-  margin-top: 0;                 /* remove extra gap above */
-  margin-bottom: 0.4rem;
-  font-size: 2rem;               /* slightly smaller if you want */
-}
-
-.projects-header p {
-  margin-top: 0.6rem;
-  margin-bottom: 1.5rem;
-}
-
-/* If you are using an <hr> under the heading */
-.projects-header hr {
-  margin: 0.5rem auto 1.2rem;    /* much tighter */
-  border-color: #384150;
-  max-width: 70%;
-}
-.projects-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
- .projects-header h2 span {
-  color: #8cd2d5; /* highlight color */
-}
-
-
-/* Grid layout */
- .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto, minmax(0, 1fr));
-  gap: 2rem 2rem;
-}
-
-/* Card styling */
-.project-card {
-  background: #141823;
-  border-radius: 16px;
-  border: 1px solid rgba(140, 210, 213, 0.4); /* soft cyan border */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
-  padding: 1rem 1.1rem 1.3rem;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  transition: transform 0.18s ease, box-shadow 0.18s ease,
-    border-color 0.18s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.8);
-  border-color: #8cd2d5;
-}
-
-/* Image area */
-.project-image {
-  background: #060711;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 0.9rem;
-}
-
-.project-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Text inside card */
-.project-card h3 {
-  font-size: 1.05rem;
-  margin: 0 0 0.5rem;
-  text-align: center;
-}
-
-.project-card p {
-  font-size: 0.9rem;
-  color: #e5e7eb;
-  line-height: 1.6;
-  margin: 0 0 1rem;
-  text-align: left;
-}
-
-/* Button */
-.project-btn {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.9rem;
-  border-radius: 999px;
-  border: 1px solid #8cd2d5;
-  background: rgba(140, 210, 213, 0.1);
-  color: #8cd2d5;
-  font-size: 0.85rem;
-  text-decoration: none;
-  margin-top: auto; /* push button to bottom */
-}
-
-.project-btn i {
-  font-size: 0.9rem;
-}
-
-.project-btn:hover {
-  background: #8cd2d5;
-  color: #141823;
-}
-
-/* Responsive tweaks */
-@media (max-width: 1000px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .projects-page-title {
+    margin: 0.75rem 0 0.5rem;
   }
 
   .projects-section {
-    padding: 2.5rem 1rem 3rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.5rem 1rem 2.5rem;
   }
-}
-  .projects-page-title {
-  margin-bottom: 0.75rem;        /* was probably bigger */
-}
 
-  </style>
-</head>
-<body>
-  <!-- Projects Section -->
-  <section class="projects-section">
-    <div class="projects-header">
-      <h2>My Recent <span>Works</span></h2>
-      <p>Here are a few projects I’ve worked on recently.</p>
-    </div>
+  .projects-header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
 
-    <div class="projects-grid">
-      <!-- Card 1 -->
-      <article class="project-card">
-        <div class="project-image">
-          <img src="../assets/images/header.jpg" alt="NLP Dataset" />
-        </div>
-        <h3>NLP Sentiment Analysis-Restaurant Reviews (Bacchanal Buffet)</h3>
-        <p>
-          This project performs Natural Language Processing (NLP)–based sentiment analysis on restaurant reviews.
-      Using text mining, preprocessing, and machine learning, it classifies reviews as positive, negative, or neutral.
-        </p>
-        <a href="https://github.com/ayesha159-ui/nlp-sentiment-streamlit" class="project-btn">
-          <i class="fa-brands fa-github"></i>
-          Github
-        </a>
-        <a href="https://nlp-sentiment-app.streamlit.app/" class="project-btn">
-          <i class="fa-brands fa-link"></i>
-          Website
-        </a>
-      </article>
+  .projects-header h2 {
+    margin: 0.2rem 0 0.3rem;
+    font-size: 2rem;
+  }
 
-      <!-- Card 2 -->
-      <article class="project-card">
-        <div class="project-image">
-          <img src="images/project2.jpg" alt="Titanic Survival Prediction" />
-        </div>
-        <h3>Titanic Survival Prediction</h3>
-        <p>
-          Built a machine learning model to predict passenger survival, including
-          feature engineering, preprocessing, and model evaluation.
-        </p>
-        <a href="#" class="project-btn">
-          <i class="fa-brands fa-kaggle"></i>
-          Kaggle
-        </a>
-      </article>
+  .projects-header h2 span {
+    color: #8cd2d5; /* highlight color */
+  }
 
-      <!-- Card 3 -->
-      <article class="project-card">
-        <div class="project-image">
-          <img src="images/project3.jpg" alt="Snake Game" />
-        </div>
-        <h3>Snake Game</h3>
-        <p>
-          Created a modern Snake game with Python, featuring scoring, collision
-          detection, and smooth keyboard-based gameplay.
-        </p>
-        <a href="#" class="project-btn">
-          <i class="fa-brands fa-github"></i>
-          GitHub
-        </a>
-      </article>
+  .projects-header p {
+    margin: 0 0 1rem;
+  }
 
-      <!-- Card 4 -->
-      <article class="project-card">
-        <div class="project-image">
-          <img src="images/project4.jpg" alt="Chess Game" />
-        </div>
-        <h3>Chess Game</h3>
-        <p>
-          Developed a simple chess application with basic move validation and a
-          clean, minimal user interface.
-        </p>
-        <a href="#" class="project-btn">
-          <i class="fa-brands fa-github"></i>
-          GitHub
-        </a>
-      </article>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 cards per row */
+    gap: 1.5rem;
+  }
 
-      <!-- Card 5 -->
-      <article class="project-card">
-        <div class="project-image">
-          <img src="images/project5.jpg" alt="News Website" />
-        </div>
-        <h3>News Website</h3>
-        <p>
-          Built a responsive news website with multiple sections, article
-          layouts, and a fully customizable content structure.
-        </p>
-        <a href="#" class="project-btn">
-          <i class="fa-solid fa-link"></i>
-          Live Demo
-        </a>
-      </article>
-    </div>
-  </section>
-</body>
-</html>
+  .project-card {
+    background: #141823;
+    border-radius: 16px;
+    border: 1px solid rgba(140, 210, 213, 0.4);
+    padding: 1rem 1.1rem 1.3rem;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+  }
 
+  .project-image {
+    background: #060711;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0.9rem;
+  }
+
+  .project-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .project-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  .project-card p {
+    margin: 0 0 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+  }
+
+  .project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid #8cd2d5;
+    background: rgba(140, 210, 213, 0.1);
+    color: #8cd2d5;
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin-top: auto; /* button sticks to bottom */
+  }
+
+  .project-btn:hover {
+    background: #8cd2d5;
+    color: #141823;
+  }
+
+  @media (max-width: 800px) {
+    .projects-grid {
+      grid-template-columns: 1fr; /* 1 per row on mobile */
+    }
+
+    .projects-section {
+      padding: 0.5rem 0.75rem 2rem;
+    }
+  }
+</style>
+
+<h1 class="projects-page-title">Projects</h1>
+
+<section class="projects-section">
+  <div class="projects-header">
+    <h2>My Recent <span>Works</span></h2>
+    <p>Here are a few projects I’ve worked on recently.</p>
+  </div>
+
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <article class="project-card">
+      <div class="project-image">
+        <img
+          src="{{ '../assets/images/header.jpg' | relative_url }}"
+          alt="NLP Sentiment Analysis project"
+        />
+      </div>
+      <h3>NLP Sentiment Analysis</h3>
+      <p>
+        Analyzed customer reviews using NLP techniques to classify sentiment
+        and visualize trends across categories.
+      </p>
+      <a class="project-btn" href="#" target="_blank">Github</a>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project-card">
+      <div class="project-image">
+        <img
+          src="{{ '/assets/images/about-illustration.jpg' | relative_url }}"
+          alt="Titanic Survival Prediction project"
+        />
+      </div>
+      <h3>Titanic Survival Prediction</h3>
+      <p>
+        Built a machine learning model to predict passenger survival with data
+        cleaning, feature engineering, and evaluation.
+      </p>
+      <a class="project-btn" href="#" target="_blank">Kaggle</a>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project-card">
+      <div class="project-image">
+        <img
+          src="{{ '/assets/images/bio-photo.jpg' | relative_url }}"
+          alt="Snake Game project"
+        />
+      </div>
+      <h3>Snake Game</h3>
+      <p>
+        Implemented a classic Snake game in Python with scoring, collision
+        detection, and smooth keyboard controls.
+      </p>
+      <a class="project-btn" href="#" target="_blank">GitHub</a>
+    </article>
+
+    <!-- Project 4 -->
+    <article class="project-card">
+      <div class="project-image">
+        <img
+          src="{{ '/assets/images/bio-pic.jpeg' | relative_url }}"
+          alt="Chess Game project"
+        />
+      </div>
+      <h3>Chess Game</h3>
+      <p>
+        Developed a simple chess interface with legal move validation and a
+        clean, minimal board layout.
+      </p>
+      <a class="project-btn" href="#" target="_blank">GitHub</a>
+    </article>
+  </div>
+</section>
