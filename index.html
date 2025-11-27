@@ -16,20 +16,19 @@ author_profile: true
 /* ===== Intro / Let Me Introduce Myself Section ===== */
 
 .intro-section {
+  width:900px;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0;
   padding: 3rem 1.5rem 3.5rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr); /* text | image */
   align-items: center;
   gap: 3rem;
 }
 
 .intro-content {
-  flex: 1 1 340px;
   color: #f9fafb;
 }
-
 /* Title */
 .intro-title {
   font-size: 2.4rem;
@@ -43,7 +42,6 @@ author_profile: true
 .intro-title span {
   color: #8cd2d5; /* your accent color */
 }
-
 /* Body text */
 .intro-content p {
   font-size: 1rem;
@@ -53,7 +51,7 @@ author_profile: true
 }
 
 .intro-emph {
-  color: #c084fc;          /* slightly purple accent for emphasis */
+  color: #8cd2d5;          /* slightly purple accent for emphasis */
   font-style: italic;
 }
 
@@ -103,10 +101,8 @@ author_profile: true
   color: #0b0f1a;
   transform: translateY(-2px);
 }
-
-/* Avatar on the right */
+/* avatar on the side */
 .intro-avatar {
-  flex: 0 1 260px;
   display: flex;
   justify-content: center;
 }
@@ -128,25 +124,18 @@ author_profile: true
   border-radius: 50%;
 }
 
-/* Responsive: stack on small screens */
-@media (max-width: 900px) {
+/* On small screens, stack them */
+@media (max-width: 800px) {
   .intro-section {
-    padding: 2.5rem 1.2rem 3rem;
-  }
-
-  .intro-title {
-    font-size: 2rem;
+    grid-template-columns: 1fr;
+    text-align: left;
   }
 
   .intro-avatar {
-    order: -1;           /* avatar on top, text below on mobile */
-    margin-bottom: 1rem;
-  }
-
-  .intro-content {
-    text-align: left;
+    order: -1; /* avatar on top for mobile, optional */
   }
 }
+
   
   </style>
   </head>
