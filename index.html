@@ -31,12 +31,13 @@ author_profile: true
 }
 /* Title */
 .intro-title {
-  font-size: 2.4rem;
+  font-size: 2.0rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-align: center;
   margin: 0 0 1.8rem;
+  white-space: nowrap;  
 }
 
 .intro-title span {
@@ -130,7 +131,15 @@ author_profile: true
     grid-template-columns: 1fr;
     text-align: left;
   }
+  
+  .intro-title {
+    font-size: 1.8rem;
+    white-space: normal;
 
+  }
+  .intro-content {
+    text-align: left;
+  }
   .intro-avatar {
     order: -1; /* avatar on top for mobile, optional */
   }
