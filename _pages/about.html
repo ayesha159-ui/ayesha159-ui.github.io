@@ -98,18 +98,7 @@ body {
   font-size: 2.6rem;
   line-height: 1;
 }
-
-/* but allow wrapping on small screens so it doesn't overflow */
-@media (max-width: 768px) {
-  .skill-grid {
-    flex-wrap: wrap;
-  }
-
-  .skill-card {
-    width: 130px;
-    height: 85px;
-  }
-  .db-icon {
+.db-icon {
   font-size: 2.6rem;
   line-height: 1;
   color: #e5e7eb;   /* or #e5e7eb if you want softer */
@@ -122,6 +111,21 @@ body {
   .skill-section h2 {
     font-size: 1.7rem;
   }
+.github-icon {
+  color: #ffffff;    /* bright white */
+  opacity: 0.9;      /* optional, you can set to 1 */
+}
+/* but allow wrapping on small screens so it doesn't overflow */
+@media (max-width: 768px) {
+  .skill-grid {
+    flex-wrap: wrap;
+  }
+
+  .skill-card {
+    width: 130px;
+    height: 85px;
+  }
+
   
 }
 }
@@ -299,9 +303,10 @@ body {
   </div>
 
   <!-- GitHub -->
-  <div class="skill-card">
-    <i class="devicon-github-original colored skill-icon flask-icon"></i>
-  </div>
+ <div class="skill-card">
+  <i class="devicon-github-original github-icon skill-icon"></i>
+</div>
+
 
 </div>
 
