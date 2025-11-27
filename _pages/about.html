@@ -40,9 +40,7 @@ body {
   /* less vertical space */
   width: 900px;
   max-width: 1000px;
-  margin: 0;
-  padding: 2.5rem 1.5rem 3rem;
-  
+  margin: 0;  
 }
 .skill-section h2 span {
   color: #8CD2D5;                   
@@ -61,14 +59,16 @@ body {
 
 /* cards: smaller + border with Skillset color (#8CD2D5) */
 .skill-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 140px;
   height: 90px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 2px solid #8CD2D5;                  /* highlight color */
   background: #050013;
   box-shadow: 0 0 14px rgba(140, 210, 213, 0.25);
 }
-
 /* put ALL icons of each group in one line on desktop */
 .skill-grid {
   display: flex;
@@ -94,7 +94,7 @@ body {
 
 /* If you're using Font Awesome or text icons */
 .skill-icon {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   line-height: 1;
 }
 
@@ -156,37 +156,43 @@ body {
     </ul>
   </div>
 </section>
-
+  
  <section class="skill-section">
   <h2>Professional <span>Skillset</span></h2>
-
   <!-- Programming Languages -->
   <h3 class="skill-group-title">Programming Languages</h3>
   <div class="skill-grid">
+    
     <div class="skill-card">
        <i class="devicon-cplusplus-plain colored skill-icon"></i>
-        <p>C++</p>
      </div>
+    
     <div class="skill-card">
        <i class="devicon-csharp-plain colored skill-icon"></i>
     </div>
+    
     <div class="skill-card">
        <i class="devicon-typescript-plain colored skill-icon"></i>
     </div>
-    <div class="skill-card">
-      <i class="fa-brands fa-python skill-icon"></i>
-    </div>
-    <div class="skill-card">
-      <i class="fa-brands fa-js skill-icon"></i>
-    </div>
-    <div class="skill-card">
-      <i class="fa-brands fa-java skill-icon"></i>
-    </div>
-    <div class="skill-card">
-      <i class="fa-brands fa-php skill-icon"></i>
-    </div>
+    
+  <div class="skill-card">
+    <i class="devicon-python-plain colored skill-icon"></i>
   </div>
-
+    
+  <div class="skill-card">
+    <i class="devicon-javascript-plain colored skill-icon"></i>
+  </div>
+    
+  <div class="skill-card">
+    <i class="devicon-php-plain colored skill-icon"></i>
+  </div>
+    
+  <div class="skill-card">
+    <i class="devicon-java-plain colored skill-icon"></i>
+  </div>
+    
+</div>
+   
   <!-- Frontend Development -->
   <h3 class="skill-group-title">Frontend Development</h3>
   <div class="skill-grid">
