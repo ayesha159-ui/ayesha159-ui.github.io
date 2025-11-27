@@ -9,14 +9,40 @@ title: "Resume"
   <meta charset="UTF-8" />
   <title>About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style> </style>
+    <style> 
+/* ===== Intro / Let Me Introduce Myself Section ===== */
+
+.intro-section {
+  width:800px;
+  max-width: 1000px;
+  margin: 0;
+  padding: 3rem 1.5rem 3.5rem;
+
+}
+
+@media (max-width: 800px) {
+  .intro-section {
+    width:100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 2.5rem 1rem 3rem;
+  }
+  
+
+}
+
+  
+  </style>
   </head>
   <body>
+    <div class ="intro-section">
+      
   <p> You can view my resume here! 
   </p>
        <iframe class="pdf" 
                 src= "/assets/data/AyeshaResume.pdf" 
             width="800" height="600">
         </iframe>
+    </div>
   </body>
 </html>
