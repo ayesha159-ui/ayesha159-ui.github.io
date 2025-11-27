@@ -1,0 +1,223 @@
+---
+layout: single
+author_profile: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+  <style> 
+/* ===== Intro / Let Me Introduce Myself Section ===== */
+
+.intro-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.intro-content {
+  flex: 1 1 340px;
+  color: #f9fafb;
+}
+
+/* Title */
+.intro-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 1.8rem;
+}
+
+.intro-title span {
+  color: #8cd2d5; /* your accent color */
+}
+
+/* Body text */
+.intro-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 0 0.8rem;
+  color: #e5e7eb;
+}
+
+.intro-emph {
+  color: #c084fc;          /* slightly purple accent for emphasis */
+  font-style: italic;
+}
+
+/* Social block */
+.intro-social {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.intro-social-title {
+  margin: 0 0 0.3rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.intro-social-text {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: #d1d5db;
+}
+
+.intro-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.intro-social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #8cd2d5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: #8cd2d5;
+  background-color: #0b0f1a;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.intro-social-icon:hover {
+  background-color: #8cd2d5;
+  color: #0b0f1a;
+  transform: translateY(-2px);
+}
+
+/* Avatar on the right */
+.intro-avatar {
+  flex: 0 1 260px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-avatar-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 0, #8b5cf6 0, #4c1d95 40%, #1f2937 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.intro-avatar-circle img {
+  width: 75%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .intro-section {
+    padding: 2.5rem 1.2rem 3rem;
+  }
+
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .intro-avatar {
+    order: -1;           /* avatar on top, text below on mobile */
+    margin-bottom: 1rem;
+  }
+
+  .intro-content {
+    text-align: left;
+  }
+}
+  
+  </style>
+  </head>
+  <body>
+   <div>
+     <section class="intro-section">
+  <div class="intro-content">
+    <h2 class="intro-title">
+      LET ME <span>INTRODUCE</span> MYSELF
+    </h2>
+
+     <p>
+      I’m Ayesha, a self-driven developer who enjoys turning ideas into working
+      products. I love building things that are useful, clean, and easy to use.
+    </p>
+
+    <p>
+      I’m comfortable working with languages like
+      <span class="intro-emph">Python and JavaScript</span>, and I’ve used
+      frameworks such as <span class="intro-emph">Django, Flask, React,</span>
+      and <span class="intro-emph">.NET</span> to build real projects.
+    </p>
+
+    <p>
+      My main interests are in
+      <span class="intro-emph">full-stack web development</span>,
+      <span class="intro-emph">data-driven applications</span>, and
+      <span class="intro-emph">automation</span> that can save time and reduce
+      repetitive work.
+    </p>
+
+    <p>
+      I enjoy working on projects where I can design the UI, connect it with
+      reliable backends, work with <span class="intro-emph">APIs, databases,</span>
+      and sometimes <span class="intro-emph">machine learning models</span> to
+      solve real-world problems.
+    </p>
+    <div class="intro-social">
+      <h3 class="intro-social-title">FIND ME ON</h3>
+      <p class="intro-social-text">
+        Feel free to <span class="intro-emph">connect</span> with me
+      </p>
+
+      <div class="intro-social-icons">
+          <a href="https://ayesha159-ui.github.io/" target="_blank" class="intro-social-icon">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+  
+        <a href="https://linkedin.com/in/fnu-ayesha" target="_blank" class="intro-social-icon">
+          <i class="fa-brands fa-link"></i>
+        </a>
+  
+        <a href="https://github.com/ayesha159-ui" target="_blank" class="intro-social-icon">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="intro-avatar">
+    <div class="intro-avatar-circle">
+      <img
+        src="{{ '/assets/images/about-illustration.jpg' | relative_url }}"
+        alt="Ayesha profile illustration"
+      />
+    </div>
+  </div>
+</section>
+   </div>
+  </body>
+</html>
+
+
